@@ -1,0 +1,22 @@
+.product-form {
+  @include gform-legacy-wireframe(transparent, black, 1px, 0, black, $color-1, white, $btn-position: center);
+}
+
+.gform_wrapper.gravity-theme .description,
+.gform_wrapper.gravity-theme .gfield_description,
+.gform_wrapper.gravity-theme .gsection_description,
+.gform_wrapper.gravity-theme .instruction {
+  padding-top: 0 !important;
+}
+
+.website-class #single-card-wrapper-06d48ea0-9bc1-f2e1-d37d-c99fd90a2261.sq-card-wrapper .sq-card-iframe-container {
+  background-color: transparent;
+}
+
+.gform_wrapper.gravity-theme .product-form .gform_fields {
+  grid-row-gap: 16px !important;
+}
+
+.product-form input[type="submit"] {
+  margin-top: var(--PAD0) !important;
+}

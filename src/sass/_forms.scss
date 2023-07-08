@@ -1,0 +1,10 @@
+@import "theme-components/sign-up-form";
+@import "theme-components/product-form";
+
+.gform_wrapper.gravity-theme .gform_fields {
+  grid-row-gap: 0 !important;
+}
+
+.product-form .gfield_checkbox {
+  margin-bottom: var(--PAD0) !important;
+}

@@ -1,0 +1,11 @@
+$url-base: "";
+$dir-uploads: "/wp-content/uploads";
+$url-media: "#{$url-base}#{$dir-uploads}";
+
+@import "css-prop-sass-shorthands/color-shorthands";
+@import "site-vars/animation-vars";
+@import "site-vars/color-vars";
+@import "site-vars/device-vars";
+@import "site-vars/font-vars";
+@import "site-vars/layout-vars";
+@import "site-vars/slick-vars.scss";

@@ -1,0 +1,27 @@
+.wp-block-columns {
+  .wp-block-column {
+    h2 {
+      margin-bottom: var(--PAD-7);
+    }
+    .wp-block-query {
+      ul {
+        li {
+          h3 {
+            a {
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+nav.wp-block-query-pagination {
+  display: none;
+}
+
+.wp-block-quote + p,
+p + .wp-block-quote {
+  margin-top: var(--PAD0);
+}

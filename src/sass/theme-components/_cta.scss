@@ -1,0 +1,18 @@
+.cta {
+  @extend %button;
+}
+
+.cta-plain {
+  @extend %button;
+  &:hover {
+    border-bottom: unset;
+    opacity: 0.8;
+    background-color: rgba($color-1, 0.8);
+    transition: ease-in-out 0.2s;
+  }
+  &:focus {
+    transform: scale(1.05);
+    transition: ease-in-out 0.2s;
+    box-shadow: 0 0 10px 0 rgba($color-1, 0.8);
+  }
+}

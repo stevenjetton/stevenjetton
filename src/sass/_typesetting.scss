@@ -1,0 +1,129 @@
+%txt-md {
+  font-size: var(--FS0);
+}
+%txt-lg {
+  font-size: var(--FS1);
+}
+%txt-xl {
+  font-size: var(--FS2);
+}
+%txt-xxl {
+  font-size: var(--FS2);
+}
+%txt-xxxl {
+  font-size: var(--FS4);
+}
+%txt-huge {
+  font-size: var(--FS5);
+}
+%txt-sm {
+  font-size: var(--FS-1);
+}
+%headings-typesetting {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height);
+  letter-spacing: 0.1ch;
+  text-transform: var(--heading-case);
+  & + p {
+    margin-top: var(--PAD-2);
+  }
+  & + ul {
+    margin-top: 20px;
+  }
+}
+%headings-layout {
+  margin: 0;
+  max-width: 25em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // broke up headings placeholders so they can be extended in more specific ways
+  @extend %headings-typesetting; // only styles related to font, color, and letter spacing
+  @extend %headings-layout; // styles related to how headings behave with surroundings
+  @extend %headings !optional; // %headings can be used in other sass files to apply styles to all headings but nothing specific is applied to the placeholder in this file
+}
+h1 {
+  font-size: var(--all-heading-font-size, var(--FS4));
+}
+h2 {
+  font-size: var(--all-heading-font-size, var(--FS3));
+}
+h3 {
+  font-size: var(--all-heading-font-size, var(--FS2));
+}
+h4 {
+  font-size: var(--all-heading-font-size, var(--FS1));
+}
+h4 {
+  font-size: var(--all-heading-font-size, var(--FS1));
+}
+h5 {
+  font-size: var(--all-heading-font-size, var(--FS1));
+}
+h6 {
+  font-size: var(--all-heading-font-size, var(--FS1));
+}
+%headings-typesetting strong {
+  font-family: var(--FONT-SANS-STACK-2);
+  font-weight: var(--heading-strong-font-weight);
+  font-size: var(--all-heading-font-size, var(--heading-strong-font-size));
+  letter-spacing: var(--heading-strong-letter-spacing);
+  color: var(--heading-color);
+}
+//--body copy and links
+p {
+  --link-decor: underline;
+  font-size: 21px;
+  font-family: var(--body-copy-font);
+  font-weight: var(--body-copy-font-weight);
+  color: var(--body-copy-color);
+  max-width: var(--body-copy-max-width);
+  line-height: 165%;
+  text-transform: none;
+  margin: 0;
+  & + %headings-typesetting {
+    margin-top: var(--PAD1);
+  }
+}
+a {
+  font-family: var(--link-font);
+  font-weight: var(--link-font-weight);
+  color: var(--link-color);
+  text-decoration: var(--link-decor);
+}
+ul,
+ol {
+  color: var(--list-color);
+  font-family: var(--list-font);
+  font-size: var(--list-font-size);
+  font-weight: var(--list-font-weight);
+  line-height: var(--list-line-height);
+  text-transform: var(--list-case);
+  padding-inline-start: 1em;
+  margin: 0;
+  & + p,
+  & + %headings-typesetting {
+    margin-top: var(--PAD-2);
+  }
+
+  li {
+    color: var(--list-color);
+    line-height: var(--li-line-height);
+    &:nth-child(1) {
+      padding-top: 10px;
+    }
+  }
+  li em {
+    text-transform: none;
+  }
+  li::marker {
+    color: var(--list-marker-color);
+    font-size: 0.7em;
+  }
+}

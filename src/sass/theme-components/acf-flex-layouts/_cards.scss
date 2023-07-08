@@ -1,0 +1,28 @@
+.card-section {
+  ul.cards,
+  ul.ministry-cards {
+    li.card {
+      border: 1px solid lightgrey;
+      .card__copy {
+        padding: var(--PAD1);
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        order: 2;
+      }
+      img {
+        order: 1;
+      }
+      a.cta {
+        order: 4;
+      }
+      p {
+        order: 3;
+      }
+    }
+  }
+}

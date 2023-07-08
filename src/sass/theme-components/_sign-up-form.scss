@@ -1,0 +1,109 @@
+// .sign-up-form-section {
+//   background: white;
+//   padding: var(--PAD0);
+// }
+
+.sign-up-form-section .sign-up-form_wrapper {
+  @include gform-legacy-wireframe(transparent, black, 2px, 0, black, black, var(--COLOR-4), $btn-position: center);
+  margin: 0 auto;
+  padding-right: 0;
+}
+
+.gform_wrapper.gravity-theme .gform_footer,
+.gform_wrapper.gravity-theme .gform_page_footer {
+  padding: 0 !important;
+  // border: 1px solid black !important;
+}
+
+.sign-up-form-section h6 {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.sign-up-form-section .form-wrapper {
+  @include mn-desktop {
+    margin-top: var(--PAD0);
+    margin-bottom: var(--PAD0);
+  }
+}
+
+.sign-up-form-section p {
+  text-align: center;
+}
+
+.sign-up-form-section p:last-child {
+  text-align: center;
+  font-style: italic;
+  font-size: var(--FS1);
+  @include mn-desktop {
+    margin-top: var(--PAD-2);
+  }
+}
+
+.gform_body.gform-body,
+.gform_footer.top_label {
+  width: 100%;
+  // @include mn-desktop {
+  //   width: 50%;
+  // }
+}
+
+.gform_wrapper.gravity-theme .sign-up-form .gform_footer,
+.gform_wrapper.gravity-theme .gform_page_footer {
+  margin: 0 !important;
+}
+
+.sign-up-form-section {
+  // margin-top: 2rem;
+  margin-bottom: var(--PAD0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.25rem;
+
+  .form-wrapper {
+    padding: var(--PAD1);
+    background-color: var(--COLOR-6);
+    text-align: center;
+    background: white;
+    // @include mn-desktop {
+    //   padding: var(--PAD0);
+    // }
+    p.heading {
+      font-weight: var(--heading-font-weight);
+      font-family: var(--FONT-SANS-STACK-1);
+      margin-bottom: var(--PAD-1);
+    }
+    .sign-up-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 0.25rem;
+    }
+
+    input[type="email"] {
+      text-align: center;
+      border: 2px solid var(--COLOR-3);
+    }
+
+    input[type="email"],
+    input[type="submit"] {
+      padding: 1rem;
+      margin-bottom: 10px;
+      width: 100%;
+      letter-spacing: 0.15ch;
+    }
+    input[type="submit"] {
+      border: none;
+      background-color: var(--COLOR-3);
+      font-weight: bold;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

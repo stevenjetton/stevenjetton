@@ -1,0 +1,27 @@
+footer.site-footer {
+  padding-left: max(var(--SCREEN-SIDE-BUFFER), 50vw - var(--CONTENT-MAX-WIDTH) / 2);
+  padding-right: max(var(--SCREEN-SIDE-BUFFER), 50vw - var(--CONTENT-MAX-WIDTH) / 2);
+  padding-top: var(--PAD2);
+  padding-bottom: var(--PAD2);
+  @include mn-desktop {
+    border-top: 1px solid var(--COLOR-8);
+  }
+
+  .footer-logo,
+  ul#menu-footer-menu {
+    text-align: center;
+  }
+
+  .footer-logo a {
+    &:hover {
+      border: none;
+      background: transparent;
+    }
+  }
+  ul#menu-footer-menu {
+    margin-top: var(--PAD2);
+  }
+  ul li.current-menu-item a {
+    border-bottom: 3px solid var(--COLOR-3);
+  }
+}

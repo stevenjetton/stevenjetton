@@ -1,0 +1,201 @@
+/*
+Theme Styles Entry Point
+*/
+
+/* All Fonts used on the site
+--------------------------------------------------------------------------------*/
+@import "fonts";
+
+/* RFS Config
+ rFSfactor determines how much fonts scale based on screen size. 
+ The higher the number the more they change size 
+--------------------------------------------------------------------------------*/
+$rFSfactor: 3 !default;
+$rFSfactor: 5;
+$rFSbase-font-size: 1rem;
+
+/* ----- Normalize CSS ------ */
+@import "normalize";
+
+/* RFS responsive font sizing package uses calc() to make dynamic font scaling
+--------------------------------------------------------------------------------*/
+@import "../../node_modules/rfs/scss";
+
+/* Default Global Variables for use in all files, will be set here if not set in site-vars.scss  
+--------------------------------------------------------------------------------*/
+@import "site-vars";
+@import "typesetting";
+
+/* Global Mixins for use in all files
+    note: some mixins modified by values in global variables.
+--------------------------------------------------------------------------------*/
+@import "mixins";
+
+/*  Slick Slider
+--------------------------------------------------------------------------------*/
+@import "../lib/accessible-slick/slick";
+@import "../lib/accessible-slick/accessible-slick-theme";
+
+/* Magnific Popup 
+--------------------------------------------------------------------------------*/
+@import "../lib/magnific-popup/magnific-popup";
+
+/* CSS Custom Properties  
+--------------------------------------------------------------------------------*/
+:root {
+  // Fluid font sizing
+  // see https://utopia.fyi/type/calculator?c=375,13,1.125,1400,16,1.25,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-m
+  // - generator set to use clamp
+  --FS-2: clamp(0.84rem, calc(1.03rem + -0.21vw), 0.99rem);
+  --FS-1: clamp(1.05rem, calc(1.06rem + -0.01vw), 1.05rem);
+  --FS0: clamp(1.13rem, calc(1.07rem + 0.27vw), 1.31rem);
+  --FS1: clamp(1.2rem, calc(1.07rem + 0.63vw), 1.64rem);
+  --FS2: clamp(1.28rem, calc(1.06rem + 1.1vw), 2.05rem);
+  --FS-2: clamp(0.64rem, calc(0.64rem + 0vw), 0.64rem);
+  --FS-1: clamp(0.72rem, calc(0.69rem + 0.12vw), 0.8rem);
+  --FS0: clamp(0.81rem, calc(0.74rem + 0.29vw), 1rem);
+  --FS1: clamp(0.91rem, calc(0.79rem + 0.52vw), 1.25rem);
+  --FS2: clamp(1.03rem, calc(0.83rem + 0.83vw), 1.56rem);
+  --FS3: clamp(1.16rem, calc(0.87rem + 1.24vw), 1.95rem);
+  --FS4: clamp(1.3rem, calc(0.88rem + 1.78vw), 2.44rem);
+  --FS5: clamp(1.46rem, calc(0.88rem + 2.48vw), 3.05rem);
+  --FS6: clamp(1.65rem, calc(0.85rem + 3.38vw), 3.82rem);
+  --FS7: clamp(1.85rem, calc(0.79rem + 4.55vw), 4.77rem);
+  --FS8: clamp(2.09rem, calc(0.67rem + 6.05vw), 5.96rem);
+  --FS9: clamp(2.35rem, calc(0.48rem + 7.97vw), 7.45rem);
+
+  // OLD Fluid padding
+  // see https://utopia.fyi/type/calculator/?c=375,32,1.067,1400,80,1.2,5,5,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-m
+  // - generator set to use clamp
+
+  // Fluid padding
+  // see https://utopia.fyi/type/calculator/?c=375,32,1.067,1400,48,1.2,7,7,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-m
+  // - generator set to use clamp
+  --PAD-7: clamp(0.84rem, calc(1.43rem + -0.68vw), 1.27rem);
+  --PAD-6: clamp(1.01rem, calc(1.48rem + -0.55vw), 1.36rem);
+  --PAD-5: clamp(1.21rem, calc(1.53rem + -0.38vw), 1.45rem);
+  --PAD-4: clamp(1.45rem, calc(1.58rem + -0.15vw), 1.54rem);
+  --PAD-3: clamp(1.65rem, calc(1.61rem + 0.14vw), 1.74rem);
+  --PAD-2: clamp(1.76rem, calc(1.64rem + 0.51vw), 2.08rem);
+  --PAD-1: clamp(1.87rem, calc(1.65rem + 0.98vw), 2.5rem);
+  --PAD0: clamp(2rem, calc(1.63rem + 1.56vw), 3rem);
+  --PAD1: clamp(2.13rem, calc(1.6rem + 2.29vw), 3.6rem);
+  --PAD2: clamp(2.28rem, calc(1.53rem + 3.19vw), 4.32rem);
+  --PAD3: clamp(2.43rem, calc(1.42rem + 4.3vw), 5.18rem);
+  --PAD4: clamp(2.59rem, calc(1.27rem + 5.66vw), 6.22rem);
+  --PAD5: clamp(2.77rem, calc(1.05rem + 7.33vw), 7.47rem);
+  --PAD6: clamp(2.95rem, calc(0.75rem + 9.38vw), 8.96rem);
+  --PAD7: clamp(3.15rem, calc(0.37rem + 11.86vw), 10.75rem);
+  --PAD-ZERO: 0;
+}
+
+html {
+  // --- CONSTANTS ---
+  // ------ Color Constants
+  // note: these color constants have corresponding sass shorthands
+  --COLOR-1: #2b2d42;
+  --COLOR-2: #5fdd9d;
+  --COLOR-3: #eac719;
+  --COLOR-4: #a9def9;
+  --COLOR-5: #4d9de0;
+  --COLOR-6: #ffffff;
+  --COLOR-7: #000000;
+  //--COLOR-8: #eae8e8;
+  --COLOR-8: #f4f4f4;
+  --COLOR-9: #4d4d4d;
+
+  // ------ Font Constants
+  --FONT-SANS-STACK-1: "Epilogue", sans-serif;
+  --FONT-SANS-STACK-2: "pt-sans-narrow", "Arial Narrow", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --FONT-SERIF-STACK-1: "Times New Roman", Times, serif;
+  --FONT-ACCENT-STACK: "Satisfy", "Lucida Bright", Georgia;
+  --BIG-HEADING-FS: var(--FS4);
+
+  // ------ Layout Constants
+  --CONTENT-MAX-WIDTH: 70rem;
+  --SCREEN-SIDE-BUFFER: 32px; //set in px, don't want to increase with font size
+  --PROSE-GAP: var(--PAD-2);
+
+  // ------ Typography
+  --heading-font-size: var(--FS2);
+  --heading-color: var(--COLOR-1);
+  --heading-font: var(--FONT-SANS-STACK-1);
+  --heading-font-weight: 900;
+  --heading-case: none;
+  --heading-line-height: 1;
+  --heading-letter-spacing: 0.15ch;
+  --heading-margin-bottom: var(--PAD-2);
+
+  --heading-strong-font: var(--FONT-SANS-STACK-1);
+  // --heading-strong-color: var(--COLOR-1);
+  --heading-strong-case: none;
+  --heading-strong-font-size: 200%;
+  --heading-strong-font-weight: 900;
+  --heading-strong-letter-spacing: 0.15ch;
+
+  --body-copy-font: var(--FONT-SERIF-STACK-1);
+  --body-copy-font-weight: normal;
+  --body-copy-color: var(--COLOR-9);
+  --body-copy-max-width: 70ch;
+
+  --link-font: var(--FONT-SERIF-STACK-1);
+  --link-font-weight: normal;
+  --link-color: var(--COLOR-1);
+  --link-decor: none;
+
+  --list-font: var(--FONT-SERIF-STACK-1);
+  --list-font-size: var(--FS1);
+  --list-font-weight: normal;
+  --list-line-height: 1.75;
+  --list-color: var(--COLOR-1);
+  --list-marker-color: var(--COLOR-1);
+  --list-case: none;
+
+  --single-post-asid-link-font-size: 18px;
+
+  --round: 10px;
+  --button-padding: 1em 2em;
+  --button-display: inline-block;
+  --button-fill: var(--COLOR-1);
+  --button-color: white;
+  --button-font-size: var(--FS0);
+
+  // ------- Product form
+  --form-btn-postion: center;
+
+  // ------ Layout Vars
+  --grid-item-min-width: 29rem;
+
+  --border-color: #ddd;
+  --border-hover-color: var(--COLOR-3);
+}
+
+/* HTML Element basics
+  --------------------------------------------------------------------------------*/
+section {
+  position: relative;
+}
+
+img {
+  line-height: 0;
+  margin-top: 0 !important;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@import "wordpress-overrides";
+
+/*  Layout and Components styles for the design
+--------------------------------------------------------------------------------*/
+@import "layout-primitives";
+@import "theme-components";
+@import "page-overrides";
+@import "forms";
+
+/* Utility classes for use on the site to override or apply specific styles.
+--------------------------------------------------------------------------------*/
+@import "util";

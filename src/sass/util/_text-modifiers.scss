@@ -1,0 +1,64 @@
+/*--------------------------------------------------------------------------------
+    LIST UTILS
+--------------------------------------------------------------------------------*/
+.clean-list {
+  list-style: none;
+  padding: 0;
+  line-height: 1.25;
+  li {
+    padding: 0;
+  }
+}
+.clean-list-all {
+  list-style: none;
+  padding: 0;
+  line-height: 1;
+  ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1;
+  }
+  li {
+    padding: 0;
+  }
+}
+i {
+  text-transform: none;
+}
+
+.text-center {
+  text-align: center;
+  > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.heading-center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.mobile\:heading-center {
+  @include mx-desktop {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.no-break {
+  white-space: nowrap;
+}
+
+.text--full-bleed {
+  max-width: none;
+  padding: 0;
+}
+
+.disclaimer {
+  font-weight: normal;
+  font-size: 12px;
+  font-style: italic;
+  max-width: none;
+  text-align: left;
+  line-height: 1.3;
+}

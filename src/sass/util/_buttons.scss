@@ -1,0 +1,66 @@
+%button {
+  color: var(--button-color);
+  background: var(--button-fill);
+  // border-radius: var(--round);
+  display: var(--button-display);
+  padding: var(--button-padding);
+  font-family: var(--FONT-SANS-STACK-1);
+  font-size: var(--button-font-size);
+  font-weight: bold;
+  letter-spacing: 0.25ch;
+  text-align: center;
+  text-transform: uppercase;
+  transition: ease-in-out 0.2s;
+  margin-top: var(--PAD0);
+  &:hover {
+    // transform: scale(1.05);
+    opacity: 0.8;
+    transition: ease-in-out 0.2s;
+  }
+  &:focus {
+    transform: scale(1.05);
+    transition: ease-in-out 0.2s;
+    box-shadow: 0 0 10px 0 rgba($color-1, 0.8);
+    text-shadow: 0 0 5px rgba(black, 0.8);
+  }
+}
+
+.button--1 {
+  @extend %button;
+  --button-fill: $color-1;
+  --button-color: white;
+}
+
+.button--2 {
+  @extend %button;
+  --button-fill: $color-2;
+  --button-color: white;
+  --button-font-size: var(--FS1);
+}
+
+.button--3 {
+  @extend %button;
+  --button-fill: $color-3;
+  --button-color: white;
+}
+
+.button--4 {
+  @extend %button;
+  --button-fill: $color-4;
+  --button-color: $color-1;
+}
+
+.button--5 {
+  @extend %button;
+  --button-fill: $color-5;
+  --button-color: white;
+}
+
+.pseudo-cta {
+  @extend %button;
+  pointer-events: none;
+  transition: ease-in-out 0.2s;
+  &:hover {
+    transform: none;
+  }
+}

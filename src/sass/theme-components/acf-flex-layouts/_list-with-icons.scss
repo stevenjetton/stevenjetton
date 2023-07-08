@@ -1,0 +1,18 @@
+.list-with-icons {
+  * {
+    margin-top: 0;
+  }
+  .list-wrapper {
+    ul {
+      li {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        span {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}

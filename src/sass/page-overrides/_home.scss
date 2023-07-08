@@ -1,0 +1,196 @@
+.home {
+  section + section {
+    padding-top: 0;
+  }
+
+  // h2 {
+  //   font-size: var(--FS5);
+  // }
+  .hero {
+    height: 50vh;
+    padding-top: 10vw;
+    @include mn-desktop {
+      height: 80vh;
+      padding-top: 5vw;
+    }
+    h1 {
+      font-size: var(--FS8);
+      max-width: 70ch;
+      text-align: center;
+      margin: 0 auto;
+      font-weight: 900;
+      line-height: 1.25;
+    }
+    .lg-cols-gt-4 > * {
+      padding-top: var(--PAD-1);
+      padding-bottom: 0;
+    }
+  }
+  main section:first-of-type {
+    border-bottom: none;
+    ul li {
+      font-size: var(--FS2);
+    }
+  }
+  > .content-wrapper {
+    padding-top: var(--PAD0);
+  }
+
+  .content-wrapper {
+    margin: 0 auto;
+    @include mn-desktop {
+      max-width: 70%;
+    }
+    h1 {
+      text-align: center;
+    }
+    h6 {
+      line-height: 1.5;
+      text-align: center;
+    }
+    .form-wrapper {
+      max-width: 32em;
+      margin: var(--PAD0) auto 0;
+      padding: 0;
+    }
+  }
+
+  .sign-up-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+
+    @include mn-desktop {
+      flex-direction: row;
+    }
+
+    .form-wrapper {
+      background-color: var(--COLOR-6);
+      text-align: center;
+      margin-top: 0;
+      .heading {
+        font-weight: var(--heading-font-weight);
+        font-family: var(--FONT-SANS-STACK-1);
+        margin-bottom: var(--PAD-1);
+      }
+
+      input[type="email"] {
+        text-align: center;
+        border: 2px solid var(--COLOR-3);
+      }
+
+      input[type="email"],
+      input[type="submit"] {
+        padding: 1rem;
+        margin-bottom: 10px;
+        width: 100%;
+        letter-spacing: 0.15ch;
+      }
+      input[type="submit"] {
+        border: none;
+        background-color: var(--COLOR-3);
+        font-weight: bold;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .sign-up-form {
+    // @include mn-desktop {
+    // flex-direction: row !important;
+    // }
+
+    .gform_body.gform-body,
+    .gform_footer.top_label,
+    .gform_body.gform-body,
+    .gform_footer.top_label {
+      @include mn-desktop {
+        width: 100%;
+      }
+    }
+
+    p {
+      text-align: center;
+      max-width: 40em;
+    }
+  }
+  .has-list {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    // padding: 3rem 0;
+    // @include mn-desktop {
+    //   border-left: 1px solid var(--border-color);
+    //   padding-left: calc(4rem + 4%);
+    // }
+    // h6 + ul + h6 {
+    //   margin-top: 5em;
+    // }
+    li {
+      padding: 0.5rem 0rem;
+
+      // border-top: 1px solid var(--border-color);
+      a {
+        padding: 0.5rem 0.15rem;
+        border-bottom: 3px solid var(--border-color);
+      }
+    }
+  }
+
+  section#home-sign-up-newsletter {
+    .sign-up-form-section {
+      margin: 0;
+      padding: 0;
+      .form-wrapper {
+        margin: 0;
+        @include mx-desktop {
+          padding: var(--PAD0);
+        }
+      }
+    }
+  }
+  .content-one {
+    p:first-child {
+      padding-top: 1rem;
+    }
+  }
+}
+// #earth {
+//   transform: rotate(-1.5deg);
+//   width: 300px;
+//   height: 300px;
+//   background: url(http://i.imgur.com/uHH9cXc.jpg);
+//   border-radius: 50%;
+//   background-size: 610px;
+//   box-shadow: inset 8px 36px 80px 36px rgb(0, 0, 0), inset -6px 0 12px 4px rgba(255, 255, 255, 0.3);
+//   animation-name: rotate;
+//   animation-duration: 500s;
+//   animation-iteration-count: infinite;
+//   animation-timing-function: linear;
+//   -webkit-animation-name: rotate;
+//   -webkit-animation-duration: 500s;
+//   -webkit-animation-iteration-count: infinite;
+//   -webkit-animation-timing-function: linear;
+// }
+// @keyframes rotate {
+//   from {
+//     background-position: 0px 0px;
+//   }
+//   to {
+//     background-position: 610px 0px;
+//   }
+// }
+// @-webkit-keyframes rotate {
+//   from {
+//     background-position: 0px 0px;
+//   }
+//   to {
+//     background-position: 610px 0px;
+//   }
+// }

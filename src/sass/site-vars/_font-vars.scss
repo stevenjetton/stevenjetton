@@ -1,0 +1,121 @@
+/*
+    FONT AND TEXT RELATED VARS
+*/
+/* 
+  NOTE: using the name "body" instead of "p" in many cases because often 
+  body copy has paragraphs and lists which are styled the same
+  cannot simply use inherit on lists because they're not nested in paragraphs
+*/
+
+/*---------------------------------------------------------------
+    Fallback Fonts
+---------------------------------------------------------------*/
+$base-sans-stack: Helvetica, Arial, Lucida, sans-serif;
+$base-serif-stack: Georgia, Times, "Times New Roman", serif;
+$base-script-stack: Impact;
+
+/*---------------------------------------------------------------
+    CHANGE THESE FONTS TO MATCH THE BRAND GUIDE
+---------------------------------------------------------------*/
+$font-fam-sans: "Montserrat";
+$font-fam-sans-alt: "Montserrat";
+$font-fam-serif: "Georgia";
+$font-fam-serif-alt: "Georgia";
+$font-fam-script: "Brownhill";
+
+$font-stack-sans: $font-fam-sans, $base-sans-stack;
+$font-stack-sans-alt: $font-fam-sans-alt, $base-sans-stack;
+$font-stack-serif: $font-fam-serif, $base-serif-stack;
+$font-stack-serif-alt: $font-fam-serif-alt, $base-serif-stack;
+$font-stack-script: $font-fam-script, $base-script-stack;
+
+$heading-font: $font-stack-sans;
+$heading-sm-font: $font-stack-sans;
+$heading-strong-font: $font-stack-sans;
+$heading-em-font: $font-stack-sans;
+$body-font: $font-stack-sans;
+$p-strong-font: $body-font;
+$fancy-font: $font-stack-script;
+$button-font: $font-stack-sans;
+$tagline-font: $font-stack-sans;
+
+/* ---------------------------------------------------------------
+    FONT SIZES
+      Generally these font size settings don't need to change 
+      unless site needs more dramatic font size differences 
+------------------------------------------------------------------*/
+
+$font-size-base: 1rem;
+
+$font-size-xxs: ($font-size-base * 0.5);
+$font-size-xs: ($font-size-base * 0.65);
+$font-size-sm: ($font-size-base * 0.875);
+$font-size-med: ($font-size-base * 1);
+$font-size-lg: ($font-size-base * 1.25);
+$font-size-xl: ($font-size-base * 1.75);
+$font-size-xxl: ($font-size-base * 2.25);
+$font-size-xxxl: ($font-size-base * 3.25);
+$font-size-huge: ($font-size-base * 5);
+
+//----headings
+$headings: h1, h2, h3, h4, h5;
+$h1-font-size: $font-size-xxxl;
+$h2-font-size: $font-size-xxxl;
+$h3-font-size: $font-size-xxl;
+$h4-font-size: $font-size-xl;
+$h5-font-size: $font-size-lg;
+$h6-font-size: $font-size-base;
+$heading-strong-font-size: 1.5em;
+$heading-em-font-size: 1em;
+$heading-sm-font-size: 0.5em;
+
+//----body copy
+
+$body: p, li;
+$body-font-size: $font-size-base;
+$ls-font-size: $body-font-size;
+$featured-text-size: 2rem;
+
+//----components
+$button-font-size: $font-size-base;
+
+//----font spacing
+$heading-letter-spacing: 0.25ch;
+$heading-line-height: 1;
+
+$heading-sm-letter-spacing: 0.2ch;
+$heading-sm-line-height: 1;
+
+$p-line-height: 1.5;
+$ls-line-height: 2;
+
+$cta-letter-spacing: 0.25ch;
+
+//----weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$heading-font-weight: 600;
+$heading-strong-font-weight: $font-weight-bold;
+$heading-em-font-weight: $font-weight-normal;
+$heading-sm-font-weight: 600;
+$body-font-weight: $font-weight-normal;
+// $p-font-weight: $font-weight-normal;
+$ls-font-weight: $body-font-weight;
+$cta-font-weight: $font-weight-bold;
+
+/* ---------------------------------------------------------------
+    FONT TRANSFORMS
+        transformations for different types of text
+------------------------------------------------------------------*/
+
+$featured-text-transform: uppercase;
+$heading-transform: none;
+$heading-strong-transform: uppercase;
+$heading-em-transform: uppercase;
+$heading-sm-transform: uppercase;
+$tagline-transform: uppercase;
+$ls-transform: none;
+$bt-transform: uppercase;
+$button-text-transform: $bt-transform;

@@ -1,0 +1,52 @@
+{
+  "name": "steven-jetton",
+  "version": "1.0.0",
+  "description": "Theme for a single website",
+  "author": "Steven Jetton",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "homepage": "https://github.com/Catalyst-Austin/single-site-starter#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Catalyst-Austin/single-site-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Catalyst-Austin/single-site-starter"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^12.1.0",
+    "copy-webpack-plugin": "^10.2.2",
+    "dir-archiver": "^1.1.1",
+    "node-sass": "^7.0.1",
+    "rfs": "^9.0.6",
+    "rtlcss": "^2.5.0",
+    "sass": "^1.49.0",
+    "sass-loader": "^12.4.0",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --watch --config webpack.config.js",
+    "watch-sass": "sass --watch ./src/sass/main.scss:./public/css/main.min.css",
+    "build-sass": "sass ./src/sass/main.scss:./public/css/main.min.css --style compressed",
+    "watch-admin-sass": "sass --watch ./admin/admin-styles.scss:./admin/admin-styles.css --no-charset",
+    "compile:rtl": "rtlcss style.css style-rtl.css"
+  }
+}

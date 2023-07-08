@@ -1,0 +1,18 @@
+.site-header {
+  a.custom-logo-link {
+    &:hover {
+      background-color: unset !important;
+      text-decoration: unset !important;
+      border-bottom: unset !important;
+    }
+    img {
+      max-width: 50px;
+    }
+  }
+  li.cta {
+    margin-top: 0;
+    a {
+      color: var(--COLOR-6);
+    }
+  }
+}
